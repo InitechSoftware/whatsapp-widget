@@ -10,14 +10,15 @@
  *
  * @link              http://timelines.ai
  * @since             1.0.0
- * @package           Whatsapp Widget
+ * @package           Wa_Click_To_Chat
  *
  * @wordpress-plugin
- * Plugin Name:       Whatsapp Widget
- * Plugin URI:        http://example.com/wa-click-to-chat-button-uri/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:       Free WA Click To Chat Button by TimelinesAI
+ * Plugin URI:        https://timelines.ai/whatsapp-click-to-chat-button-widget/
+ * Description:       Add a Whatsapp Live chat widget/click-to-chat buton for your WordPress website for free. Place the Whatsapp button on your website and keep the conversation with your customers even if they leave your website. Enter your Whatsapp number, choose widget position and publish the widget easily.
+
  * Version:           1.0.0
- * Author:            timelines
+ * Author:            TimelinesAI
  * Author URI:        http://timelines.ai/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -41,22 +42,22 @@ define( 'WA_CLICK_TO_CHAT_VERSION', '1.0.0' );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wa-click-to-chat-button-activator.php
  */
-function activate_whatsapp_widget() {
+function activate_wa_click_to_chat() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wa-click-to-chat-button-activator.php';
-	Whatsapp_Widget_Activator::activate();
+	Wa_Click_To_Chat_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wa-click-to-chat-button-deactivator.php
  */
-function deactivate_whatsapp_widget() {
+function deactivate_wa_click_to_chat() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wa-click-to-chat-button-deactivator.php';
-	Whatsapp_Widget_Deactivator::deactivate();
+	Wa_Click_To_Chat_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_whatsapp_widget' );
-register_deactivation_hook( __FILE__, 'deactivate_whatsapp_widget' );
+register_activation_hook( __FILE__, 'activate_wa_click_to_chat' );
+register_deactivation_hook( __FILE__, 'deactivate_wa_click_to_chatt' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -75,7 +76,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wa-click-to-chat-button.ph
  */
 function run_plugin_name() {
 
-	$plugin = new Whatsapp_Widget();
+	$plugin = new Wa_Click_To_Chat();
 	$plugin->run();
 
 }

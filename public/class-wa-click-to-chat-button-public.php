@@ -3,11 +3,11 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/public
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/public
- * @author     Your Name <email@example.com>
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/public
+ * @author     TimelinesAI <hello@timelines.ai>
  */
-class Whatsapp_Widget_Public {
+class Wa_Click_To_Chat_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -86,18 +86,6 @@ class Whatsapp_Widget_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Whatsapp_Widget_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Whatsapp_Widget_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/whatsapp-widget-public.css', array(), $this->version, 'all' );
 
 	}
@@ -108,18 +96,6 @@ class Whatsapp_Widget_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Whatsapp_Widget_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Whatsapp_Widget_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/whatsapp-widget-public.js', array( 'jquery' ), $this->version, false );
 

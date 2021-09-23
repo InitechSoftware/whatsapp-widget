@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
+ * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
- * @author     Your Name <email@example.com>
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/includes
+ * @author     TimelinesAI <hello@timelines.ai>
  */
-class Whatsapp_Widget_i18n {
+class Wa_Click_To_Chat_i18n {
 
 
 	/**
@@ -35,13 +35,9 @@ class Whatsapp_Widget_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'plugin-name',
+			'wa-click-to-chat-button',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
-
 	}
-
-
-
 }

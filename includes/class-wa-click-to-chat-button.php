@@ -6,11 +6,11 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://example.com
+ * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
- * @author     Your Name <email@example.com>
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chatt/includes
+ * @author     TimelinesAI <hello@timelines.ai>
  */
-class Whatsapp_Widget {
+class Wa_Click_To_Chat {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -72,7 +72,7 @@ class Whatsapp_Widget {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'whatsapp-widget';
+		$this->plugin_name = 'wa-click-to-chat-button';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -103,28 +103,28 @@ class Whatsapp_Widget {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-whatsapp-widget-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wa-click-to-chat-button-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-whatsapp-widget-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wa-click-to-chat-button-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-whatsapp-widget-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wa-click-to-chat-button-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-whatsapp-widget-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wa-click-to-chat-button-public.php';
 
 
     require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
-		$this->loader = new Whatsapp_Widget_Loader();
+		$this->loader = new Wa_Click_To_Chat_Loader();
 
 	}
 
@@ -139,7 +139,7 @@ class Whatsapp_Widget {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Whatsapp_Widget_i18n();
+		$plugin_i18n = new Wa_Click_To_Chat_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -154,7 +154,7 @@ class Whatsapp_Widget {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Whatsapp_Widget_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Wa_Click_To_Chat_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -171,7 +171,7 @@ class Whatsapp_Widget {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Whatsapp_Widget_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Wa_Click_To_Chat_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -203,7 +203,7 @@ class Whatsapp_Widget {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Whatsapp_Widget_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Wa_Click_To_Chat_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

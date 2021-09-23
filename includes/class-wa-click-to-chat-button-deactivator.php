@@ -3,11 +3,11 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://example.com
+ * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
- * @author     Your Name <email@example.com>
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/includes
+ * @author     TimelinesAI <hello@timelines.ai>
  */
-class Whatsapp_Widget_Deactivator {
+class Wa_Click_To_Chat_Deactivator {
 
 	/**
 	 * Short Description. (use period)

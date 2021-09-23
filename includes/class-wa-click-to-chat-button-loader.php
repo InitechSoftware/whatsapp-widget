@@ -3,11 +3,11 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/includes
- * @author     Your Name <email@example.com>
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/includes
+ * @author     TimelinesAI <hello@timelines.ai>
  */
-class Whatsapp_Widget_Loader {
+class Wa_Click_To_Chat_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

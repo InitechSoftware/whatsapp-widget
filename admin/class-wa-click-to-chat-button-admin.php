@@ -6,8 +6,8 @@
  * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/admin
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Whatsapp_Widget
- * @subpackage Whatsapp_Widget/admin
- * @author     Your Name <email@example.com>
+ * @package    Wa_Click_To_Chat
+ * @subpackage Wa_Click_To_Chat/admin
+ * @author     TimelinesAI <hello@timelines.ai>
  */
-class Whatsapp_Widget_Admin
+class Wa_Click_To_Chat_Admin
 {
 
   /**
@@ -72,7 +72,7 @@ class Whatsapp_Widget_Admin
       'id'                => $this->plugin_name,              // Required, meta box id, unique per page, to save: get_option( id )
       'parent'            => 'plugins.php',                   // Parent page of plugin menu (default Settings [options-general.php])
       'submenu'           => true,                            // Required for submenu
-      'title'             => 'Whatsapp Widget Settings',               // The title of the options page and the name in admin menu
+      'title'             => 'Whatsapp Click To Chat Button Settings',               // The title of the options page and the name in admin menu
       'capability'        => 'edit_posts',                // The capability needed to view the page
       'plugin_basename'   =>  plugin_basename(plugin_dir_path(__DIR__) . $this->plugin_name . '.php'),
       // 'tabbed'            => false,
@@ -218,7 +218,7 @@ class Whatsapp_Widget_Admin
      * class.
      */
 
-    wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/plugin-name-admin.css', array(), $this->version, 'all');
+    wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/wa-click-to-chat-button-admin.css', array(), $this->version, 'all');
   }
 
   /**
@@ -241,6 +241,6 @@ class Whatsapp_Widget_Admin
      * class.
      */
 
-    wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/plugin-name-admin.js', array('jquery'), $this->version, false);
+    wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wa-click-to-chat-button-admin.js', array('jquery'), $this->version, false);
   }
 }
