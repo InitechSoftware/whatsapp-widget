@@ -59,7 +59,7 @@ class Wa_Click_To_Chat_Public {
    * @since 1.0.0
    */
   public function insert_widget(){
-    $widget_meta_options = get_option('whatsapp-widget');
+    $widget_meta_options = get_option('wa-click-to-chat-button');
     $whatsapp_link = 'https://wa.me/' . $widget_meta_options['en']['phone_number'] . '/' . '?text=' . $widget_meta_options['en']['message'];
 
     $backlink = '<div><a class="ww-link" type="link" href="https://timelines.ai">TimelinesAI</a></div>';
@@ -86,7 +86,7 @@ class Wa_Click_To_Chat_Public {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/whatsapp-widget-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wa-click-to-chat-button-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -97,7 +97,7 @@ class Wa_Click_To_Chat_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/whatsapp-widget-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wa-click-to-chat-button-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
