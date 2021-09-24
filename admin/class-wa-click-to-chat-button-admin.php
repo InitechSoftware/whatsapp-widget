@@ -103,6 +103,14 @@ class Wa_Click_To_Chat_Admin
       'icon'   => 'dashicons-admin-generic',
       'fields' => array(
 
+        array(
+          'id'      => 'widget_display',
+          'type'    => 'switcher',
+          'title'   => 'Widget Display',
+          'label'   => 'Do you want to display the widget?',
+          'default' => 'no',
+      ),
+
           array(
               'id'          => 'phone_number',
               'type'        => 'text',

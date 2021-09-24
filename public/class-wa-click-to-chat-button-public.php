@@ -60,11 +60,12 @@ class Wa_Click_To_Chat_Public {
    */
   public function insert_widget(){
     $widget_meta_options = get_option('wa-click-to-chat-button');
+    print_r($widget_meta_options);
     $whatsapp_link = 'https://wa.me/' . $widget_meta_options['en']['phone_number'] . '/' . '?text=' . $widget_meta_options['en']['message'];
 
     $backlink = '<div><a class="ww-link" type="link" href="https://timelines.ai">TimelinesAI</a></div>';
 
-    echo '<div id="whatsapp-widget" class="ww-' . $widget_meta_options['en']['position'] . ' ww-' . $widget_meta_options['en']['size'] . '">
+    echo '<div id="whatsapp-widget" class="ww-' . $widget_meta_options['en']['position'] . ' ww-' . $widget_meta_options['en']['size'] . ' ww-'.$widget_meta_options['en']['widget_display'].'">
     <a target="_blank" href="'.$whatsapp_link.'" class="ww-text">' . $widget_meta_options['en']['call_to_action'] . '</a>
     <div class="ww-icon">
     <div>

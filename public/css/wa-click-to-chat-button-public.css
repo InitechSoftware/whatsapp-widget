@@ -7,6 +7,9 @@
   gap: 2rem;
   z-index: 99999999;
 }
+#whatsapp-widget.ww-no{
+  visibility: hidden;
+}
 #whatsapp-widget .ww-icon {
   display: flex;
   flex-direction: column;
