@@ -115,11 +115,11 @@ class Wa_Click_To_Chat_Admin
               'id'          => 'phone_number',
               'type'        => 'text',
               'title'       => 'Phone Number',
-              'before'      => 'Text Before',
-              'after'       => 'Text After',
+              'before'      => '',
+              'after'       => 'Example: +1(800) 123-45-67',
               'class'       => 'text-class',
               'description' => 'Insert your phone number',
-              'default'     => 'Default Text',
+              'default'     => '',
               'attributes'    => array(
                  'placeholder' => 'do stuff',
                  'data-test'   => 'test',
@@ -133,8 +133,8 @@ class Wa_Click_To_Chat_Admin
               'id'          => 'call_to_action',
               'type'        => 'text',
               'title'       => 'Call to action',
-              'before'      => 'Text Before',
-              'after'       => 'Text After',
+              'before'      => '',
+              'after'       => 'Will be displayed as a welcome message to your website visitors',
               'class'       => 'text-class',
               'description' => 'Insert your call to action',
               'default'     => 'Message Us',
@@ -150,11 +150,11 @@ class Wa_Click_To_Chat_Admin
             'id'          => 'message',
             'type'        => 'text',
             'title'       => 'Whatsapp pre-filled message',
-            'before'      => 'Text Before',
+            'before'      => '',
             'after'       => 'Pre-filled message helps your customer to start a conversation with you with a request template',
             'class'       => 'text-class',
             'description' => ' (optional)',
-            'default'     => '',
+            'default'     => "Hi! I'm interested in your service",
             'attributes'    => array(
                'placeholder' => 'do stuff',
                'data-test'   => 'test',
@@ -163,13 +163,6 @@ class Wa_Click_To_Chat_Admin
             'help'        => 'Help text',
             'sanitize'    => array( $this, 'test_sanitize_callback' ),
         ),
-
-          array(
-              'id'      => 'hidden_1',
-              'type'    => 'hidden',
-              'default' => 'hidden',
-          ),
-
           array(
             'id'      => 'size',
             'type'    => 'radio',
@@ -192,14 +185,6 @@ class Wa_Click_To_Chat_Admin
             ),
             'default' => 'right',
           ),
-          /*array(
-            'id'    => 'backlink',
-            'type'  => 'checkbox',
-            'title' => 'TimelinesAI Branding',
-            'label' => 'Do you want to set TimelinesAI branding',
-            'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
-        ),*/
-
       )
   );
     $options_panel = new Exopite_Simple_Options_Framework($config_submenu, $fields);
