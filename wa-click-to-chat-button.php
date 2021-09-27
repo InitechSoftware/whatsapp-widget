@@ -3,17 +3,13 @@
 /**
  * The plugin bootstrap file
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
  *
  * @link              http://timelines.ai
  * @since             1.0.0
  * @package           Wa_Click_To_Chat
  *
  * @wordpress-plugin
- * Plugin Name:       Free WA Click To Chat Button by TimelinesAI
+ * Plugin Name:       Free Click To Chat Button by TimelinesAI
  * Plugin URI:        https://timelines.ai/whatsapp-click-to-chat-button-widget/
  * Description:       Add a Whatsapp Live chat widget/click-to-chat buton for your WordPress website for free. Place the Whatsapp button on your website and keep the conversation with your customers even if they leave your website. Enter your Whatsapp number, choose widget position and publish the widget easily.
 
@@ -22,7 +18,7 @@
  * Author URI:        http://timelines.ai/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       wa-click-to-chat-button
+ * Text Domain:       free-click-to-chat-button-by-timelinesai
  * Domain Path:       /languages
  */
 
