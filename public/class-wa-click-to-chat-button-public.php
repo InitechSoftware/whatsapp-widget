@@ -60,7 +60,6 @@ class Wa_Click_To_Chat_Public {
    */
   public function insert_widget(){
     $widget_meta_options = get_option('wa-click-to-chat-button');
-    print_r($widget_meta_options);
     $whatsapp_link = 'https://wa.me/' . $widget_meta_options['en']['phone_number'] . '/' . '?text=' . $widget_meta_options['en']['message'];
 
     $backlink = '<div><a class="ww-link" type="link" href="https://timelines.ai">TimelinesAI</a></div>';
