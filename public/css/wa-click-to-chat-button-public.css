@@ -6,9 +6,13 @@
   align-items: center;
   gap: 2rem;
   z-index: 99999999;
+  visibility: hidden;
+}
+#whatsapp-widget.ww-yes{
+  visibility: visible;
 }
 #whatsapp-widget.ww-no{
-  visibility: hidden;
+  visibility: hidden!important;
 }
 #whatsapp-widget .ww-icon {
   display: flex;
