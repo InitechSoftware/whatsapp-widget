@@ -6,8 +6,8 @@
  * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/includes
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/includes
  */
 
 /**
@@ -16,16 +16,13 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/includes
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/includes
  * @author     TimelinesAI <hello@timelines.ai>
  */
-class Wa_Click_To_Chat_Deactivator {
+class Free_Click_To_Chat_Button_By_TimelinesAI_Deactivator {
 
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
 	 *
 	 * @since    1.0.0
 	 */

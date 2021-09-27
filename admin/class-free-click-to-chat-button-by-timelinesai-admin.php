@@ -6,8 +6,8 @@
  * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/admin
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/admin
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/admin
  * @author     TimelinesAI <hello@timelines.ai>
  */
-class Wa_Click_To_Chat_Admin
+class Free_Click_To_Chat_Button_By_TimelinesAI_Admin
 {
 
   /**
@@ -72,7 +72,7 @@ class Wa_Click_To_Chat_Admin
       'id'                => $this->plugin_name,              // Required, meta box id, unique per page, to save: get_option( id )
       'parent'            => 'plugins.php',                   // Parent page of plugin menu (default Settings [options-general.php])
       'submenu'           => true,                            // Required for submenu
-      'title'             => 'Whatsapp Click To Chat Button Settings',               // The title of the options page and the name in admin menu
+      'title'             => 'Free Click To Chat Button By TimelinesAI Settings',               // The title of the options page and the name in admin menu
       'capability'        => 'edit_posts',                // The capability needed to view the page
       'plugin_basename'   =>  plugin_basename(plugin_dir_path(__DIR__) . $this->plugin_name . '.php'),
       // 'tabbed'            => false,
@@ -211,7 +211,7 @@ class Wa_Click_To_Chat_Admin
      * class.
      */
 
-    wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/wa-click-to-chat-button-admin.css', array(), $this->version, 'all');
+    wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/free-click-to-chat-button-by-timelinesai-admin.css', array(), $this->version, 'all');
   }
 
   /**
@@ -234,6 +234,6 @@ class Wa_Click_To_Chat_Admin
      * class.
      */
 
-    wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wa-click-to-chat-button-admin.js', array('jquery'), $this->version, false);
+    wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/free-click-to-chat-button-by-timelinesai-admin.js', array('jquery'), $this->version, false);
   }
 }

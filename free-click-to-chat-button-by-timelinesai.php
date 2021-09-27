@@ -6,7 +6,7 @@
  *
  * @link              http://timelines.ai
  * @since             1.0.0
- * @package           Wa_Click_To_Chat
+ * @package           Free_Click_To_Chat_Button_By_TimelinesAI
  *
  * @wordpress-plugin
  * Plugin Name:       Free Click To Chat Button by TimelinesAI
@@ -32,34 +32,34 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WA_CLICK_TO_CHAT_VERSION', '1.0.0' );
+define( 'FREE_CLICK_TO_CHAT_BUTTON_BY_TIMELINESAI_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wa-click-to-chat-button-activator.php
  */
-function activate_wa_click_to_chat() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wa-click-to-chat-button-activator.php';
-	Wa_Click_To_Chat_Activator::activate();
+function activate_free_click_to_chat_button() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-free-click-to-chat-button-by-timelinesai-activator.php';
+	Free_Click_To_Chat_Button_By_TimelinesAI_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wa-click-to-chat-button-deactivator.php
  */
-function deactivate_wa_click_to_chat() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wa-click-to-chat-button-deactivator.php';
-	Wa_Click_To_Chat_Deactivator::deactivate();
+function deactivate_free_click_to_chat_button() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-free-click-to-chat-button-by-timelinesai-deactivator.php';
+	Free_Click_To_Chat_Button_By_TimelinesAI_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_wa_click_to_chat' );
-register_deactivation_hook( __FILE__, 'deactivate_wa_click_to_chatt' );
+register_activation_hook( __FILE__, 'activate_free_click_to_chat_button' );
+register_deactivation_hook( __FILE__, 'deactivate_free_click_to_chat_button' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-wa-click-to-chat-button.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-free-click-to-chat-button-by-timelinesai.php';
 
 /**
  * Begins execution of the plugin.
@@ -72,7 +72,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wa-click-to-chat-button.ph
  */
 function run_plugin_name() {
 
-	$plugin = new Wa_Click_To_Chat();
+	$plugin = new Free_Click_To_Chat_Button_By_TimelinesAI();
 	$plugin->run();
 
 }

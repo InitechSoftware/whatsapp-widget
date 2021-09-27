@@ -9,8 +9,8 @@
  * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/includes
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chatt/includes
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAIt/includes
  * @author     TimelinesAI <hello@timelines.ai>
  */
-class Wa_Click_To_Chat {
+class Free_Click_To_Chat_Button_By_TimelinesAI {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -72,7 +72,7 @@ class Wa_Click_To_Chat {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'wa-click-to-chat-button';
+		$this->plugin_name = 'free-click-to-chat-button-by-timelinesai';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -103,28 +103,28 @@ class Wa_Click_To_Chat {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wa-click-to-chat-button-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-free-click-to-chat-button-by-timelinesai-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wa-click-to-chat-button-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-free-click-to-chat-button-by-timelinesai-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wa-click-to-chat-button-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-free-click-to-chat-button-by-timelinesai-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wa-click-to-chat-button-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-free-click-to-chat-button-by-timelinesai-public.php';
 
 
     require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/exopite-simple-options/exopite-simple-options-framework-class.php';
-		$this->loader = new Wa_Click_To_Chat_Loader();
+		$this->loader = new Free_Click_To_Chat_Button_By_TimelinesAI_Loader();
 
 	}
 
@@ -139,7 +139,7 @@ class Wa_Click_To_Chat {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Wa_Click_To_Chat_i18n();
+		$plugin_i18n = new Free_Click_To_Chat_Button_By_TimelinesAI_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -154,7 +154,7 @@ class Wa_Click_To_Chat {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Wa_Click_To_Chat_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Free_Click_To_Chat_Button_By_TimelinesAI_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -171,7 +171,7 @@ class Wa_Click_To_Chat {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Wa_Click_To_Chat_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Free_Click_To_Chat_Button_By_TimelinesAI_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -203,7 +203,7 @@ class Wa_Click_To_Chat {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Wa_Click_To_Chat_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Free_Click_To_Chat_Button_By_TimelinesAI_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

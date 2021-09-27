@@ -10,7 +10,7 @@
  * @since      1.0.0
  *
  * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/includes
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/includes
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/includes
  * @author     TimelinesAI <hello@timelines.ai>
  */
-class Wa_Click_To_Chat_i18n {
+class Free_Click_To_Chat_Button_By_TimelinesAI_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Wa_Click_To_Chat_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'wa-click-to-chat-button',
+			'free-click-to-chat-button-by-timelinesai',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

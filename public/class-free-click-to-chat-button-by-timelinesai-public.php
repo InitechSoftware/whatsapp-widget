@@ -6,8 +6,8 @@
  * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/public
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/public
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/public
  * @author     TimelinesAI <hello@timelines.ai>
  */
-class Wa_Click_To_Chat_Public {
+class Free_Click_To_Chat_Button_By_TimelinesAI_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -59,7 +59,7 @@ class Wa_Click_To_Chat_Public {
    * @since 1.0.0
    */
   public function insert_widget(){
-    $widget_meta_options = get_option('wa-click-to-chat-button');
+    $widget_meta_options = get_option('free-click-to-chat-button-by-timelinesai');
     $whatsapp_link = 'https://wa.me/' . $widget_meta_options['en']['phone_number'] . '/' . '?text=' . $widget_meta_options['en']['message'];
 
     $backlink = '<div><a class="ww-link" type="link" href="https://timelines.ai">TimelinesAI</a></div>';
@@ -86,7 +86,7 @@ class Wa_Click_To_Chat_Public {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wa-click-to-chat-button-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/free-click-to-chat-button-by-timelinesai-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -97,7 +97,7 @@ class Wa_Click_To_Chat_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wa-click-to-chat-button-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/free-click-to-chat-button-by-timelinesai-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

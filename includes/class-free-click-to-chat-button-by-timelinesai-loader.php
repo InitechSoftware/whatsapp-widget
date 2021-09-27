@@ -6,8 +6,8 @@
  * @link       http://timelines.ai
  * @since      1.0.0
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/includes
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Wa_Click_To_Chat
- * @subpackage Wa_Click_To_Chat/includes
+ * @package    Free_Click_To_Chat_Button_By_TimelinesAI
+ * @subpackage Free_Click_To_Chat_Button_By_TimelinesAI/includes
  * @author     TimelinesAI <hello@timelines.ai>
  */
-class Wa_Click_To_Chat_Loader {
+class Free_Click_To_Chat_Button_By_TimelinesAI_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
