@@ -571,14 +571,14 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 			$retval = 'error';
 
 			$nonce_v = wp_verify_nonce( $_POST['wpnonce'], 'exopite_sof_backup' );
-			$nonce = $_POST['wpnonce'];
+			$nonce = sanitize_text_field($_POST['wpnonce']);
 
 			if ( isset( $_POST['unique'] ) && ! empty( $_POST['value'] ) && isset( $_POST['wpnonce'] ) && wp_verify_nonce( $_POST['wpnonce'], 'exopite_sof_backup' ) ) {
 
 				$option_key = sanitize_key( $_POST['unique'] );
 
 				//Using json_decode
-				$value = json_decode( stripslashes( $_POST['value'] ), true );
+				$value = json_decode( stripslashes( sanitize_text_field($_POST['value']) ), true );
 
 				if ( is_array( $value ) ) {
 
@@ -1064,11 +1064,11 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 				// if this is metabox, $posted_data is post_id we are saving
 				$post_id = $posted_data;
 				if ( $this->is_options_simple() ) {
-					$posted_data = $_POST;
+					$posted_data = sanitize_post($_POST);
 				} else {
 
 					if ( isset( $_POST[ $this->unique ] ) ) {
-						$posted_data = $_POST[ $this->unique ];
+						$posted_data = sanitize_text_field($_POST[ $this->unique ]);
 					} else {
 						return false;
 					}
