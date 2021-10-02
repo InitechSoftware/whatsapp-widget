@@ -17,14 +17,14 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework_Field_switcher' ) ) {
 		public function output() {
 
 			echo $this->element_before();
-			$label = ( isset( $this->field['label'] ) ) ? '<div class="exopite-sof-text-desc">' . $this->field['label'] . '</div>' : '';
+			$label =
 
 			$classes = ( isset( $this->field['class'] ) ) ? implode( ' ', explode( ' ', $this->field['class'] ) ) : '';
 
 			echo '<label class="checkbox">';
-			echo '<input name="' . $this->element_name() . '" value="yes" class="checkbox__input ' . $classes . '" type="checkbox"' . $this->element_attributes() . checked( $this->element_value(), 'yes', false ) . '>';
+			echo '<input name="' . esc_attr($this->element_name()) . '" value="yes" class="checkbox__input ' . esc_attr($classes) . '" type="checkbox"' . esc_attr($this->element_attributes()) . esc_attr(checked( $this->element_value(), 'yes', false ) ). '>';
 			echo '<div class="checkbox__switch"></div>';
-			echo '</label>' . $label;
+			echo '</label>' . ( isset( $this->field['label'] ) ) ? '<div class="exopite-sof-text-desc">' . esc_attr($this->field['label']) . '</div>' : '';
 			echo $this->element_after();
 
 		}

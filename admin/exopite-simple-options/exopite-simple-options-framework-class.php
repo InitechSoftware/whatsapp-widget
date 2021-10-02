@@ -1712,7 +1712,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 			echo '<li  class="exopite-sof-nav-list-item' . $active . $hidden . '"' . $depend . ' data-section="' . $section_name . '">';
 			echo '<span class="exopite-sof-nav-list-item-title">';
 			$this->get_menu_item_icons( $section );
-			echo $section['title'];
+			echo esc_attr($section['title']);
 			echo '</span>';
 			echo '</li>';
 
@@ -1735,7 +1735,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 
 				if( isset( $value['sections'] ) ) {
 
-					echo '<li  class="exopite-sof-nav-list-parent-item' . $active . '">';
+					echo '<li  class="exopite-sof-nav-list-parent-item' . esc_attr($active ). '">';
 					echo '<span class="exopite-sof-nav-list-item-title">';
 					$this->get_menu_item_icons( $value );
 					echo $value['title'];
@@ -1804,7 +1804,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 
 			settings_errors();
 
-			echo '<div class="exopite-sof-wrapper exopite-sof-wrapper-' . $this->config['type'] . ' ' . $this->unique . '-options">';
+			echo '<div class="exopite-sof-wrapper exopite-sof-wrapper-' . esc_attr($this->config['type']) . ' ' . esc_attr($this->unique ). '-options">';
 
 			switch ( $this->config['type'] ) {
 				case 'menu':
@@ -1895,7 +1895,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 				 * Current language need to pass to save function, if "All languages" seleted, WPML report default
 				 * on save hook.
 				 */
-				echo '<input type="hidden" name="_language" value="' . $current_language . '">';
+				echo '<input type="hidden" name="_language" value="' . esc_attr($current_language) . '">';
 			}
 
 			$sections = count( $this->fields );
@@ -1912,7 +1912,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 			 * Generate fields
 			 */
 			// Generate tab navigation
-			echo '<div class="exopite-sof-content' . $tabbed . '">';
+			echo '<div class="exopite-sof-content' . esc_attr($tabbed) . '">';
 
 			if ( ! empty( $tabbed ) ) {
 
