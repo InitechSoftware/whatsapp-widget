@@ -32,7 +32,7 @@ To get the Whatsapp Widget working:
 
 1. Upload plugin folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Setup plugin appearance in plugin settings `/wp-admin/plugins.php?page=wa-click-to-chat-button`
+3. Setup plugin appearance in plugin settings `/wp-admin/plugins.php?page=free-click-to-chat-button-by-timelinesai`
 
 
 == Changelog ==

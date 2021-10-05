@@ -1567,7 +1567,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 		 */
 		public function display_options_page_header() {
 
-			echo '<form method="post" action="options.php" enctype="multipart/form-data" name="' . $this->unique . '" class="exopite-sof-form-js ' . $this->unique . '-form" data-save="' . esc_attr__( 'Saving...', 'exopite-sof' ) . '" data-saved="' . esc_attr__( 'Saved Successfully.', 'exopite-sof' ) . '">';
+			echo '<form method="post" action="options.php" enctype="multipart/form-data" name="' . esc_attr($this->unique) . '" class="exopite-sof-form-js ' . esc_attr($this->unique) . '-form" data-save="' . esc_attr__( 'Saving...', 'exopite-sof' ) . '" data-saved="' . esc_attr__( 'Saved Successfully.', 'exopite-sof' ) . '">';
 
 			settings_fields( $this->unique );
 			do_settings_sections( $this->unique );
@@ -1580,12 +1580,12 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 			$option_title = ( ! empty( $this->config['option_title'] ) ) ? $this->config['option_title'] : $this->config['title'];
 
 			echo '<header class="exopite-sof-header exopite-sof-header-js">';
-			echo '<h1>' . $option_title . $current_language_title . '</h1>';
+			echo '<h1>' . esc_attr($option_title) . esc_attr($current_language_title) . '</h1>';
 
 			echo '<span class="exopite-sof-search-wrapper"><input type="text" class="exopite-sof-search"></span>';
 
 			echo '<fieldset><span class="exopite-sof-ajax-message"></span>';
-			submit_button( esc_attr__( 'Save Settings', 'exopite-sof' ), 'primary ' . 'exopite-sof-submit-button-js', $this->unique . '-save', false, array() );
+			submit_button( esc_attr__( 'Save Settings', 'exopite-sof' ), 'primary ' . 'exopite-sof-submit-button-js', esc_attr($this->unique) . '-save', false, array() );
 			echo '</fieldset>';
 			echo '</header>';
 
@@ -1622,7 +1622,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
             $section_name = ( isset( $section['name'] ) ) ? $section['name'] : '';
             $section_icon = ( isset( $section['icon'] ) ) ? $section['icon'] : '';
 
-			echo '<div class="exopite-sof-section exopite-sof-section-' . $section_name . $visibility . '">';
+			echo '<div class="exopite-sof-section exopite-sof-section-' . esc_attr( $section_name) . esc_attr($visibility) . '">';
 
 			if ( isset( $section['title'] ) && ! empty( $section['title'] ) ) {
 
@@ -1633,7 +1633,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 					$icon_before = 'fa-before ';
 				}
 
-				echo '<h2 class="exopite-sof-section-header" data-section="' . $section_name . '"><span class="' . $icon_before . $section_icon . '"></span>' . $section['title'] . '</h2>';
+				echo '<h2 class="exopite-sof-section-header" data-section="' . esc_attr($section_name) . '"><span class="' . esc_attr($icon_before) . esc_attr($section_icon) . '"></span>' . esc_attr($section['title']) . '</h2>';
 
 			}
 
@@ -1682,9 +1682,9 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 		public function get_menu_item_icons( $section ) {
 
 			if ( strpos( $section['icon'], 'dashicon' ) !== false ) {
-				echo '<span class="exopite-sof-nav-icon dashicons-before ' . $section['icon'] . '"></span>';
+				echo '<span class="exopite-sof-nav-icon dashicons-before ' . esc_attr($section['icon']) . '"></span>';
 			} elseif ( strpos( $section['icon'], 'fa' ) !== false ) {
-				echo '<span class="exopite-sof-nav-icon fa-before ' . $section['icon'] . '" aria-hidden="true"></span>';
+				echo '<span class="exopite-sof-nav-icon fa-before ' . esc_attr($section['icon']) . '" aria-hidden="true"></span>';
 			}
 
 		}
@@ -1709,7 +1709,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 
             $section_name = ( isset( $section['name'] ) ) ? $section['name'] : '';
 
-			echo '<li  class="exopite-sof-nav-list-item' . $active . $hidden . '"' . $depend . ' data-section="' . $section_name . '">';
+			echo '<li  class="exopite-sof-nav-list-item' . esc_attr($active) . esc_attr($hidden) . '"' . esc_attr($depend) . ' data-section="' . esc_attr($section_name) . '">';
 			echo '<span class="exopite-sof-nav-list-item-title">';
 			$this->get_menu_item_icons( $section );
 			echo esc_attr($section['title']);
@@ -1738,7 +1738,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 					echo '<li  class="exopite-sof-nav-list-parent-item' . esc_attr($active ). '">';
 					echo '<span class="exopite-sof-nav-list-item-title">';
 					$this->get_menu_item_icons( $value );
-					echo $value['title'];
+					echo esc_attr($value['title']);
 					echo '</span>';
 					echo '<ul style="display:none;">';
 

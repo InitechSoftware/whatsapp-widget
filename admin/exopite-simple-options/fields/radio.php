@@ -18,7 +18,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework_Field_radio' ) ) {
 
 			$classes = ( isset( $this->field['class'] ) ) ? implode( ' ', explode( ' ', $this->field['class'] ) ) : '';
 
-			echo esc_attr($this->element_before());
+
 
 			if ( isset( $this->field['options'] ) ) {
 
@@ -69,8 +69,6 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework_Field_radio' ) ) {
 				}
 
 			}
-
-			echo esc_attr($this->element_after());
 
 		}
 
