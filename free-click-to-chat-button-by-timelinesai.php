@@ -13,7 +13,7 @@
  * Plugin URI:        https://timelines.ai/whatsapp-click-to-chat-button-widget/
  * Description:       Add a Whatsapp Live chat widget/click-to-chat buton for your WordPress website for free. Place the Whatsapp button on your website and keep the conversation with your customers even if they leave your website. Enter your Whatsapp number, choose widget position and publish the widget easily.
 
- * Version:           1.0.0
+ * Version:           3.0.2
  * Author:            TimelinesAI
  * Author URI:        http://timelines.ai/
  * License:           GPL-2.0+
@@ -32,7 +32,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'FREE_CLICK_TO_CHAT_BUTTON_BY_TIMELINESAI_VERSION', '1.0.0' );
+define( 'FREE_CLICK_TO_CHAT_BUTTON_BY_TIMELINESAI_VERSION', '3.0.2' );
 
 /**
  * The code that runs during plugin activation.
