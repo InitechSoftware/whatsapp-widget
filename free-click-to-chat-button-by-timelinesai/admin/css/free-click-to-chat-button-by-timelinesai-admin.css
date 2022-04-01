@@ -1,0 +1,15 @@
+.hidden{
+  display: none;
+}
+.ww-standard{
+  display: none;
+}
+.ww-extended{
+  display: none;
+}
+.ww-standard.display{
+  display: block;
+}
+.ww-extended.display{
+  display: block;
+}
