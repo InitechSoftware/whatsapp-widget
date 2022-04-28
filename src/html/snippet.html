@@ -11,7 +11,7 @@
     welcome: "Lorem Ipsum", // welcome message in extended layout, accepts any string
   };
   let url_root = "https://d3kzab8jj16n2f.cloudfront.net";
-  let s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/v2/main.js';
+  let s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url_root + '/v3/main.js';
   s.onload = function () { tmWidgetInit(config) };
   let x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
 </script>
