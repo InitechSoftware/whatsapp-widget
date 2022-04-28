@@ -3,23 +3,23 @@ Contributors: @timelinesai
 Tags: widget, chat
 Requires at least: 3.0.1
 Tested up to: 5.8
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Add a Whatsapp Live chat widget/click-to-chat buton for your WordPress website for free.
 
-Place the Whatsapp button on your website and keep the conversation with your customers even if they leave your website. Enter your Whatsapp number, choose widget position and publish the widget easily. 
+Place the Whatsapp button on your website and keep the conversation with your customers even if they leave your website. Enter your Whatsapp number, choose widget position and publish the widget easily.
 
 
 == Description ==
 Add a Whatsapp Live chat widget/click-to-chat buton for your WordPress website for free.
 
-Place the Whatsapp button on your website and keep the conversation with your customers even if they leave your website. Enter your Whatsapp number, choose widget position and publish the widget easily. 
+Place the Whatsapp button on your website and keep the conversation with your customers even if they leave your website. Enter your Whatsapp number, choose widget position and publish the widget easily.
 
-You may optionally add a pre-filled message that helps your customer to start a conversation with you with a request template. 
+You may optionally add a pre-filled message that helps your customer to start a conversation with you with a request template.
 
-The plugin is completely free to use. 
+The plugin is completely free to use.
 
 To get the Whatsapp Widget working:
 1. Enter your Whatsapp number into the Phone Number field
@@ -36,9 +36,12 @@ To get the Whatsapp Widget working:
 
 
 == Changelog ==
-= 1.0.3 = 
+= 1.0.4 =
+* Migrated to CDN version 2 of the widget
+* Added extended layout
+= 1.0.3 =
 * Migrated to CDN version of the widget
-= 1.0.2 = 
+= 1.0.2 =
 * Improved layout
 * Fix bugs
 = 1.0 =
