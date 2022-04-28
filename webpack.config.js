@@ -130,7 +130,7 @@ const plugins = () => {
         }
     ),
     new MiniCssExtractPlugin({
-      filename: '../../timelines-staging/web/widget/widget-style.css',
+      filename: '../timelines-staging/web/widget/widget-style.css',
     }),
     new ImageminPlugin({
       disable: isDev,
@@ -155,7 +155,7 @@ module.exports = {
     main: ['@babel/polyfill', './js/index.js'],
   },
   output: {
-    filename: '../../timelines-staging/web/widget/dist.js',
+    filename: 'dist/dist.js',
     //path: path.resolve(__dirname, 'twentytwelve')
   },
   resolve: {
