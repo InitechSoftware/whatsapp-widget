@@ -124,7 +124,7 @@ function insertStyles() {
   let link = document.createElement("link");
   link.type = "text/css";
   link.rel = "stylesheet";
-  link.href = "https://d3kzab8jj16n2f.cloudfront.net/v2/widget-style.css";
+  link.href = "https://d3kzab8jj16n2f.cloudfront.net/v3/widget-style.css";
   headId.appendChild(link);
 }
 
