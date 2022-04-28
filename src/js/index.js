@@ -202,12 +202,6 @@ function initAmplitude(widgetConfig) {
     phone: filterPhoneNumber(widgetConfig.phone),
     email: widgetConfig.email,
   };
-  let opt_callback = function (instance) {
-    if (readCookie("widget_attributed") === null && user_id_for_amplitude != null) {
-      instance.logEvent("widget_attributed");
-      setCookie("widget_attributed", "1", 365);
-    }
-  };
   let user_id_for_amplitude = filterPhoneNumber(widgetConfig.phone);
   console.log("Amplitude Attribution: about to init the client instance");
   amplitude.getInstance().init("0e73dc7c6a30ebbc4bf3ea1144ebdb71", user_id_for_amplitude, opt_config, opt_callback);
